@@ -19,7 +19,7 @@ func New(secretKey string) *Kagi {
 	return &Kagi{secretKey: secretKey}
 }
 
-// Decrypt decrypts the cipherText and returns the plainText
+// Encrypt encrypts the plainText and returns the cipherText
 func (k *Kagi) Encrypt(plainText string) string {
 	aes, err := aes.NewCipher([]byte(k.secretKey))
 	if err != nil {
