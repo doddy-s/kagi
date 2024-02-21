@@ -7,31 +7,29 @@ Kagi is a simple package to encrypt and decrypt string using AES-256 algorithm.
 
 ### Get the package and create kagi instance
 
-```
+```go
 package main
 
 import (
 	"fmt"
-
 	"github.com/doddy-s/kagi"
 )
 
 func main() {
 	kagi := kagi.New("1234567890123456789012ThisIsAKey")
-    // Make sure your key is 32 bytes long
+	// Make sure your key is 32 bytes long
 }
 ```
 
 ### Encrypt
-```
-    someString := "ThisIsTheStringToBeEncrypted"
-    
+```go
+    	someString := "ThisIsTheStringToBeEncrypted"
 	encrypted := kagi.Encrypt(someString)
 	fmt.Println("Encrypted string = ", encrypted)
 ```
 
 ### Decrypt
-```
-    decrypted := kagi.Decrypt(encrypted)
+```go
+    	decrypted := kagi.Decrypt(encrypted)
 	fmt.Println("Decrypted string = ", decrypted)
 ```
